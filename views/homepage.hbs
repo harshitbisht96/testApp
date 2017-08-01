@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+Add a post here.
+<form action="/upload" method="POST" enctype="multipart/form-data">
+    <input type="file"  name="avatar" ><br>
+    <input type="text" name="story"><br>
+    <input type="submit" value="Submit">
+</form>
+
+<!--<img src="uploa‌​ds/avatar-1501541056‌​425.png">-->
+{{#each data as |post|}}
+    {{ post.story }}
+    <img  src= "{{post.image}}"  >
+    <br>
+{{/each}}
+</body>
+</html>
+
+
