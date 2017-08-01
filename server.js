@@ -17,6 +17,7 @@ var db=require('./database.js');
 // app.engine('html', require('ejs').renderFile);
 // app.set('view engine', 'html');
 app.set('view engine', 'hbs');
+app.use(express.static(__dirname + '/uploads/')); // static files & images placed here
 
 // const Grid=require('gridfs-stream');
 var file2upload,fileName,filePath;
